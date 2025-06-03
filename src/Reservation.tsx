@@ -88,8 +88,14 @@ const ReservationForm: React.FC = () => {
           onSubmit={(e) => {
             e.preventDefault();
             handleConfirm();
+            setDetails({
+              people: "",
+              date: "",
+              time: "",
+            });
+            setStep(1);
           }}
-            >
+        >
           <h2>Contact details</h2>
           <div className="summary-box">
             You are making a reservation for{" "}
@@ -115,7 +121,7 @@ const ReservationForm: React.FC = () => {
               name="phone"
               value={details.phone || ""}
               onChange={handleInputChange}
-                required
+              required
             />
           </div>
 

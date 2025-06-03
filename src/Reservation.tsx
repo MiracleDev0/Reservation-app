@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Reservation.css";
 
 type BookingDetails = {
-  people: number | string; // Allow string for input compatibility
+  people: number | string;
   date: string;
   time: string;
   name?: string;
